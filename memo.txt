@@ -1,0 +1,20 @@
+やること：三つのdockerfileを作る
+
+まあまずnginxからかな・・・
+
+wordpress+php-fpm, mariadb, nginx
+まずこれら三つのdockerfileを設定する
+
+終わったらdockercompose.yamlで３つが協調するように動かす
+
+〜〜〜〜〜〜〜〜〜〜〜〜〜〜
+
+mariadbでやること：
+ユーザーを二人作る
+kamori(adming)とkamori
+
+wordpressでやること：
+dbを受け入れて連携する
+
+nginxでやること：
+httpsで通信する

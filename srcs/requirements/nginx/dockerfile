@@ -1,0 +1,9 @@
+FROM alpine:edge
+RUN	apk update && apk add nginx
+RUN apk add openssl && mkdir ssl_config && cd ssl_config \
+&& openssl req -x509 \
+	-nodes -days 30 \
+	-subj "/C=JP" \
+	-newkey rsa:2048 \
+	-keyout /ssl_config/kamori.42.jp.key -out /ssl_config/kamori.42.jp.crt
+CMD ["nginx", "-g", "daemon off;"]
